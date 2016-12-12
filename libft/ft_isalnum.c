@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.h                                              :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dalexand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 15:18:56 by dalexand          #+#    #+#             */
-/*   Updated: 2016/11/14 15:33:12 by dalexand         ###   ########.fr       */
+/*   Created: 2016/02/20 15:47:36 by dalexand          #+#    #+#             */
+/*   Updated: 2016/02/20 16:00:45 by dalexand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FDF_H
-# define FDF_H
+#include "libft.h"
 
-#include <mlx.h>
-#include <stdio.h>
-# include "libft/libft.h"
-
-#endif
+int		ft_isalnum(int c)
+{
+	return (ft_isdigit(c) || ft_isalpha(c));
+}

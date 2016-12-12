@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.h                                              :+:      :+:    :+:   */
+/*   ft_list_size.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dalexand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 15:18:56 by dalexand          #+#    #+#             */
-/*   Updated: 2016/11/14 15:33:12 by dalexand         ###   ########.fr       */
+/*   Created: 2016/02/04 13:14:03 by dalexand          #+#    #+#             */
+/*   Updated: 2016/04/14 11:32:43 by dalexand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FDF_H
-# define FDF_H
+#include "lift.h"
 
-#include <mlx.h>
-#include <stdio.h>
-# include "libft/libft.h"
+int		ft_list_size(t_list *begin_list)
+{
+	int		i;
 
-#endif
+	i = 0;
+	while (begin_list)
+	{
+		i++;
+		begin_list = begin_list->next;
+	}
+	return (i);
+}

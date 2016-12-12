@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.h                                              :+:      :+:    :+:   */
+/*   ft_abs_value.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dalexand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 15:18:56 by dalexand          #+#    #+#             */
-/*   Updated: 2016/11/14 15:33:12 by dalexand         ###   ########.fr       */
+/*   Created: 2016/04/09 12:15:00 by dalexand          #+#    #+#             */
+/*   Updated: 2016/11/14 14:44:40 by dalexand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FDF_H
-# define FDF_H
+#include "libft.h"
 
-#include <mlx.h>
-#include <stdio.h>
-# include "libft/libft.h"
-
-#endif
+int		ft_abs_value(int nb)
+{
+	if (nb < 0)
+		return (-nb);
+	return (nb);
+}

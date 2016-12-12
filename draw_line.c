@@ -6,22 +6,26 @@
 /*   By: dalexand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 13:09:15 by dalexand          #+#    #+#             */
-/*   Updated: 2016/11/28 14:35:25 by dalexand         ###   ########.fr       */
+/*   Updated: 2016/12/12 14:08:04 by dalexand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <mlx.h>
-#include <stdio>
 
-int		main()
+void	ligne(int x1, int y1, int x2, int yf)
 {
-	void	*mlx;
-	void	*win;
 	int		x;
 	int		y;
+	double	a;
+	double 	b;
 
-	mlx = mlx_init();
-	win = mlx_new_window(mlx, 400, 400, "mlx 42");
-	mlx_pixel_put(mlx, win, x, y, 0x00FFFFFF);
-	mlx_loop(mlx);
+	a = (double)((y2 - y1) / (x2 - x1);
+	b = y1 - (a * x1);
+	x = x1;
+	while (x <= x2)
+	{	
+		y = (int)((a * x) + b);
+		pixel_put(x;y);
+		x++;
+	}
 }

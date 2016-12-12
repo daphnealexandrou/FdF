@@ -1,20 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.h                                              :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dalexand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 15:18:56 by dalexand          #+#    #+#             */
-/*   Updated: 2016/11/14 15:33:12 by dalexand         ###   ########.fr       */
+/*   Created: 2016/02/24 10:58:25 by dalexand          #+#    #+#             */
+/*   Updated: 2016/02/24 11:40:50 by dalexand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FDF_H
-# define FDF_H
+#include "libft.h"
 
-#include <mlx.h>
-#include <stdio.h>
-# include "libft/libft.h"
+char	*ft_strcat(char *s1, const char *s2)
+{
+	size_t		i;
+	size_t		j;
 
-#endif
+	i = 0;
+	j = 0;
+	while (s1[i] != '\0')
+		i++;
+	while (s2[j] != '\0')
+	{
+		s1[i] = s2[j];
+		i++;
+		j++;
+	}
+	s1[i] = '\0';
+	return (s1);
+}

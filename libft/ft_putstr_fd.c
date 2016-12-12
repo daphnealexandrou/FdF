@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.h                                              :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dalexand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 15:18:56 by dalexand          #+#    #+#             */
-/*   Updated: 2016/11/14 15:33:12 by dalexand         ###   ########.fr       */
+/*   Created: 2016/02/21 15:08:08 by dalexand          #+#    #+#             */
+/*   Updated: 2016/02/21 15:46:33 by dalexand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FDF_H
-# define FDF_H
+#include "libft.h"
 
-#include <mlx.h>
-#include <stdio.h>
-# include "libft/libft.h"
+void	ft_putstr_fd(char const *s, int fd)
+{
+	int		i;
 
-#endif
+	i = 0;
+	while (s[i] != '\0')
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
+}

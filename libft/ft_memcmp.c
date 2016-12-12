@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.h                                              :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dalexand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 15:18:56 by dalexand          #+#    #+#             */
-/*   Updated: 2016/11/14 15:33:12 by dalexand         ###   ########.fr       */
+/*   Created: 2016/02/24 14:34:23 by dalexand          #+#    #+#             */
+/*   Updated: 2016/02/27 23:04:10 by dalexand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FDF_H
-# define FDF_H
+#include "libft.h"
 
-#include <mlx.h>
-#include <stdio.h>
-# include "libft/libft.h"
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+	unsigned char	*c1;
+	unsigned char	*c2;
+	size_t			i;
 
-#endif
+	c1 = (unsigned char *)s1;
+	c2 = (unsigned char *)s2;
+	i = 0;
+	while (i < n && *c1 == *c2)
+	{
+		c1++;
+		c2++;
+		i++;
+	}
+	if (i == n)
+		return (0);
+	else
+		return (*c1 - *c2);
+}
