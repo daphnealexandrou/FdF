@@ -6,7 +6,7 @@
 /*   By: dalexand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 15:18:56 by dalexand          #+#    #+#             */
-/*   Updated: 2016/11/14 15:33:12 by dalexand         ###   ########.fr       */
+/*   Updated: 2017/01/24 14:38:53 by dalexand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,16 @@
 #include <mlx.h>
 #include <stdio.h>
 # include "libft/libft.h"
+
+typedef struct			s_struct
+{
+		int		xa;
+		int		ya;
+		int		xb;
+		int		yb;
+		int		x;
+		int		y;
+}						t_struct
+
 
 #endif
